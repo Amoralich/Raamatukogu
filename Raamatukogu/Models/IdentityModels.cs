@@ -29,5 +29,7 @@ namespace Raamatukogu.Models
         {
             return new ApplicationDbContext();
         }
-    }
+
+		public System.Data.Entity.DbSet<Raamatukogu.Models.RaamatuLisamine> RaamatuLisamines { get; set; }
+	}
 }

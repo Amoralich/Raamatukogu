@@ -1,0 +1,42 @@
+﻿@model Raamatukogu.Models.RaamatuLisamine
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RaamatuLisamine</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LaenuPikkus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LaenuPikkus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

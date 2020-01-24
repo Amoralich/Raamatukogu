@@ -22,7 +22,7 @@ namespace Raamatukogu.Controllers
 
 		public ActionResult Contact()
 		{
-			ViewBag.Message = "Your contact page.";
+			ViewBag.Message = "Contact for me.";
 
 			return View();
 		}
