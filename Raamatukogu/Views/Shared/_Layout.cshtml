@@ -17,14 +17,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Homepage", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Raamatukogu", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" }) 
+                <img class="image" src="https://lh3.googleusercontent.com/proxy/MjdCPm0iAuJAd9nCCGT8ss0A0S6pcyxsuHg9mfAHwxkVR3KDgjxBzfjL0PC811kifCBEI4_DRsGsnniOfhQTgPy1I5lDDLlZG7MRtDlH" />
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+  
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("RaamatuLaenutamine", "RaamatuLisamine", "RaamatuLisamines")</li>
+                    <li>@Html.ActionLink("List", "Andmetelist", "RaamatuLisamine")</li>
+                    <li>@Html.ActionLink("RaamatuLaenutamine", "RaamatuLisamine", "RaamatuLisamine")</li>
+                    
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

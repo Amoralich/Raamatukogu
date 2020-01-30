@@ -176,7 +176,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\RaamatuLisaminesController.cs" />
+    <Compile Include="Controllers\RaamatuLisamineController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -249,15 +249,17 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\RaamatuLisamines\Create.cshtml" />
-    <Content Include="Views\RaamatuLisamines\Delete.cshtml" />
-    <Content Include="Views\RaamatuLisamines\Details.cshtml" />
-    <Content Include="Views\RaamatuLisamines\Edit.cshtml" />
-    <Content Include="Views\RaamatuLisamines\Index.cshtml" />
-    <Content Include="Views\RaamatuLisamines\RaamatuLisamine.cshtml" />
+    <Content Include="Views\RaamatuLisamine\Create.cshtml" />
+    <Content Include="Views\RaamatuLisamine\Delete.cshtml" />
+    <Content Include="Views\RaamatuLisamine\Details.cshtml" />
+    <Content Include="Views\RaamatuLisamine\Edit.cshtml" />
+    <Content Include="Views\RaamatuLisamine\Index.cshtml" />
+    <Content Include="Views\RaamatuLisamine\RaamatuLisamine.cshtml" />
+    <Content Include="Views\RaamatuLisamine\AndmeteList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\IMG\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

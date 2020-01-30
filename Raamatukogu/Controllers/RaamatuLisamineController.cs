@@ -10,9 +10,15 @@ using Raamatukogu.Models;
 
 namespace Raamatukogu.Controllers
 {
-    public class RaamatuLisaminesController : Controller
+    public class RaamatuLisamineController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+
+		public ActionResult AndmeteList()
+		{
+			return View(db.RaamatuLisamine.ToList());
+		}
+
 		public ActionResult RaamatuLisamine()
 		{
 			return View();
@@ -27,7 +33,7 @@ namespace Raamatukogu.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				db.RaamatuLisamines.Add(raamatuLisamine);
+				db.RaamatuLisamine.Add(raamatuLisamine);
 				db.SaveChanges();
 				return RedirectToAction("Index");
 			}
@@ -37,7 +43,7 @@ namespace Raamatukogu.Controllers
 		// GET: RaamatuLisamines
 		public ActionResult Index()
         {
-            return View(db.RaamatuLisamines.ToList());
+            return View(db.RaamatuLisamine.ToList());
         }
 
         // GET: RaamatuLisamines/Details/5
@@ -47,7 +53,7 @@ namespace Raamatukogu.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            RaamatuLisamine raamatuLisamine = db.RaamatuLisamines.Find(id);
+            RaamatuLisamine raamatuLisamine = db.RaamatuLisamine.Find(id);
             if (raamatuLisamine == null)
             {
                 return HttpNotFound();
@@ -70,7 +76,7 @@ namespace Raamatukogu.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.RaamatuLisamines.Add(raamatuLisamine);
+                db.RaamatuLisamine.Add(raamatuLisamine);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -85,7 +91,7 @@ namespace Raamatukogu.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            RaamatuLisamine raamatuLisamine = db.RaamatuLisamines.Find(id);
+            RaamatuLisamine raamatuLisamine = db.RaamatuLisamine.Find(id);
             if (raamatuLisamine == null)
             {
                 return HttpNotFound();
@@ -116,7 +122,7 @@ namespace Raamatukogu.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            RaamatuLisamine raamatuLisamine = db.RaamatuLisamines.Find(id);
+            RaamatuLisamine raamatuLisamine = db.RaamatuLisamine.Find(id);
             if (raamatuLisamine == null)
             {
                 return HttpNotFound();
@@ -129,8 +135,8 @@ namespace Raamatukogu.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            RaamatuLisamine raamatuLisamine = db.RaamatuLisamines.Find(id);
-            db.RaamatuLisamines.Remove(raamatuLisamine);
+            RaamatuLisamine raamatuLisamine = db.RaamatuLisamine.Find(id);
+            db.RaamatuLisamine.Remove(raamatuLisamine);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
