@@ -7,13 +7,13 @@ namespace Raamatukogu.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class migrations : IMigrationMetadata
+    public sealed partial class nada : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(migrations));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(nada));
         
         string IMigrationMetadata.Id
         {
-            get { return "202001240913449_migrations"; }
+            get { return "202002031140076_nada"; }
         }
         
         string IMigrationMetadata.Source

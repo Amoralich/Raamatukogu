@@ -14,6 +14,7 @@ namespace Raamatukogu.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+		
 		public ActionResult AndmeteList()
 		{
 			return View(db.RaamatuLisamine.ToList());
@@ -22,6 +23,10 @@ namespace Raamatukogu.Controllers
 		public ActionResult RaamatuLisamine()
 		{
 			return View();
+		}
+		public ActionResult RaamatuVäljaLaenutamine()
+		{
+			return View(db.RaamatuLisamine.ToList());
 		}
 
 		// POST: RaamatuLisamines/Create

@@ -10,6 +10,7 @@ namespace Raamatukogu.Controllers
 	{
 		public ActionResult Index()
 		{
+
 			return View();
 		}
 

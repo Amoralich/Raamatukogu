@@ -31,5 +31,7 @@ namespace Raamatukogu.Models
         }
 
 		public System.Data.Entity.DbSet<Raamatukogu.Models.RaamatuLisamine> RaamatuLisamine { get; set; }
+
+		public System.Data.Entity.DbSet<Raamatukogu.Models.RaamatuVäljaLaenutamine> RaamatuVäljaLaenutamine { get; set; }
 	}
 }
