@@ -184,12 +184,18 @@
     <Compile Include="Migrations\202002031140076_nada.Designer.cs">
       <DependentUpon>202002031140076_nada.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003100707333_das.cs" />
+    <Compile Include="Migrations\202003100707333_das.Designer.cs">
+      <DependentUpon>202003100707333_das.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AndmeteTabel.cs" />
+    <Compile Include="Models\Laenutus.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RaamatuLisamine.cs" />
+    <Compile Include="Models\RaamatuVäljaLaenutamine.cs" />
+    <Compile Include="Models\VäljaLaenutatudInimesteNimed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -255,11 +261,11 @@
     <Content Include="Views\RaamatuLisamine\Edit.cshtml" />
     <Content Include="Views\RaamatuLisamine\Index.cshtml" />
     <Content Include="Views\RaamatuLisamine\RaamatuLisamine.cshtml" />
-    <Content Include="Views\RaamatuLisamine\AndmeteList.cshtml" />
+    <Content Include="Views\RaamatuLisamine\Laenutus.cshtml" />
+    <Content Include="Views\RaamatuLisamine\RaamatuVäljaLaenutamine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\IMG\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -277,6 +283,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202002031140076_nada.resx">
       <DependentUpon>202002031140076_nada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003100707333_das.resx">
+      <DependentUpon>202003100707333_das.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

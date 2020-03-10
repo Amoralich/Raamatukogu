@@ -14,8 +14,21 @@ namespace Raamatukogu.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-		
-		public ActionResult AndmeteList()
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public ActionResult RaamatuVäljaLaenutamine([Bind(Include = "Id,nimi,autor,LaenuPikkus")] RaamatuLisamine raamatuLisamine)
+		{
+			if (ModelState.IsValid)
+			{
+				db.RaamatuLisamine.Add(raamatuLisamine);
+				db.SaveChanges();
+				return RedirectToAction("Index");
+			}
+
+			return View(raamatuLisamine);
+		}
+
+		public ActionResult Laenutus()
 		{
 			return View(db.RaamatuLisamine.ToList());
 		}
@@ -26,7 +39,7 @@ namespace Raamatukogu.Controllers
 		}
 		public ActionResult RaamatuVäljaLaenutamine()
 		{
-			return View(db.RaamatuLisamine.ToList());
+			return View(db.RaamatuVäljaLaenutamine.ToList());
 		}
 
 		// POST: RaamatuLisamines/Create

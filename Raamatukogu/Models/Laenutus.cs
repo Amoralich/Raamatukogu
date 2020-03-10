@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Raamatukogu.Models
 {
-	public class AndmeteTabel
+	public class Laenutus
 	{
 		public int Id { get; set; }
 		public string Nimi { get; set; }

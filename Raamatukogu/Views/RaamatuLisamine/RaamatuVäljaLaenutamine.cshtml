@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Raamatukogu.Models.RaamatuVäljaLaenutamine>
+
+@{
+    ViewBag.Title = "RaamatuVäljaLaenutamine";
+}
+
+<h2>RaamatuVäljaLaenutamine</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UleNadalaVeel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KuniNadalVeel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UletanudTahtaeg)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UleNadalaVeel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KuniNadalVeel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UletanudTahtaeg)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.iD }) |
+            @Html.ActionLink("Details", "Details", new { id=item.iD }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.iD })
+        </td>*@
+    </tr>
+}
+
+</table>
