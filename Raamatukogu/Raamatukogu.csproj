@@ -195,7 +195,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RaamatuLisamine.cs" />
     <Compile Include="Models\RaamatuVäljaLaenutamine.cs" />
-    <Compile Include="Models\VäljaLaenutatudInimesteNimed.cs" />
+    <Compile Include="Models\TahtAeg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -263,6 +263,7 @@
     <Content Include="Views\RaamatuLisamine\RaamatuLisamine.cshtml" />
     <Content Include="Views\RaamatuLisamine\Laenutus.cshtml" />
     <Content Include="Views\RaamatuLisamine\RaamatuVäljaLaenutamine.cshtml" />
+    <Content Include="Views\RaamatuLisamine\TahtAeg.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

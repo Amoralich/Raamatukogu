@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Raamatukogu.Models
 {
-	public class VäljaLaenutatudInimesteNimed
+	public class TahtAeg
 	{
 		public int iD { get; set; }
 		public string nimi { get; set; }

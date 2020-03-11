@@ -16,16 +16,16 @@ namespace Raamatukogu.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult RaamatuVäljaLaenutamine([Bind(Include = "Id,nimi,autor,LaenuPikkus")] RaamatuLisamine raamatuLisamine)
+		public ActionResult RaamatuVäljaLaenutamine([Bind(Include = "Id,nimi,raamat")] RaamatuVäljaLaenutamine raamatuväljalaenutamine)
 		{
 			if (ModelState.IsValid)
 			{
-				db.RaamatuLisamine.Add(raamatuLisamine);
+				db.RaamatuVäljaLaenutamine.Add(raamatuväljalaenutamine);
 				db.SaveChanges();
 				return RedirectToAction("Index");
 			}
 
-			return View(raamatuLisamine);
+			return View(raamatuväljalaenutamine);
 		}
 
 		public ActionResult Laenutus()
