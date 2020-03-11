@@ -14,6 +14,11 @@ namespace Raamatukogu.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+		public ActionResult Aeg()
+		{
+			return View(db.TahtAeg.ToList());
+		}
+
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public ActionResult RaamatuVäljaLaenutamine([Bind(Include = "Id,nimi,raamat")] RaamatuVäljaLaenutamine raamatuväljalaenutamine)

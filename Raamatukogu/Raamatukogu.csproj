@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -195,7 +196,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RaamatuLisamine.cs" />
     <Compile Include="Models\RaamatuVäljaLaenutamine.cs" />
-    <Compile Include="Models\TahtAeg.cs" />
+    <Compile Include="Models\Aeg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
